@@ -20,7 +20,7 @@ function convertSecondsToTime(seconds) {
 
 async function getsongs(folder="english") {
   window.folder=folder
-  let websong = await fetch(`./songs/${folder}/`);
+  let websong = await fetch(`tree/main/songs/${folder}/`);
   let response = await websong.text();
   let div = document.createElement("div");
   div.innerHTML = response;
