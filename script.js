@@ -120,7 +120,7 @@ currentsong.addEventListener("timeupdate",()=>{
   document.querySelector(".total").innerHTML=convertSecondsToTime(currentsong.duration)
   document.querySelector(".circle").style.left=(currentsong.currentTime/currentsong.duration)*100 +"%"
   if(currentsong.currentTime==currentsong.duration){
-    let index = songs.findIndex(song => currentsong.src.includes(song))
+    let index = songs.findIndex(song => decodeURI(currentsong.src).includes(song))
     if(index<songs.length-1){
       playmusic(songs[index+1].split(`songs/${folder}/`)[1])
     }
@@ -133,7 +133,7 @@ document.querySelector(".durbar").addEventListener("click",e=>{
   currentsong.currentTime= (currentsong.duration*percentage)/100
 })
 prev.addEventListener("click",()=>{
-  let index = songs.findIndex(song => currentsong.src.includes(song))
+  let index = songs.findIndex(song => decodeURI(currentsong.src).includes(song))
   if(index>0){
     playmusic(songs[index-1].split(`songs/${folder}/`)[1])
   }
@@ -141,7 +141,7 @@ prev.addEventListener("click",()=>{
   currentsong.currentTime=0
 })
 next.addEventListener("click",()=>{
- let index = songs.findIndex(song => currentsong.src.includes(song))
+ let index = songs.findIndex(song => decodeURI(currentsong.src).includes(song))
   if(index<songs.length-1){
     playmusic(songs[index+1].split(`songs/${folder}/`)[1])
   }
