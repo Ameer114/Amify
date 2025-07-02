@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+body {
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  padding: 8px;
+  margin: 0;
+  transition: all 2s ease-in-out;
+}
+.logolink {
+  height: 100%;
+  margin: auto;
+}
+.logolink img {
+  margin: 8px;
+}
+.logocontainer {
+  width: 25%;
+  height: 100%;
+}
+.nav {
+  height: 48px;
+  width: 100%;
+
+  display: flex;
+}
+.centernav img {
+  width: 24px;
+  height: 50%;
+  background-color: rgb(31, 31, 31);
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  width: 400px;
+  background-color: rgb(31, 31, 31);
+  height: 100%;
+  align-items: center;
+  border-radius: 30px;
+}
+.search input {
+  width: 80%;
+  height: 70%;
+  background-color: rgba(245, 222, 179, 0);
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: grey;
+}
+.search input:focus {
+  outline: none;
+}
+
+.search img {
+  background-color: rgba(136, 110, 75, 0);
+  margin: 4px;
+  cursor: pointer;
+}
+
+.centernav {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastnav {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.lastnav span {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 50px;
+}
+.lastnav .log {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.lastnav .log:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.826);
+  color: rgba(0, 0, 0, 0.905);
+}
+.lastnav .sign {
+  color: rgba(255, 255, 255, 0.672);
+  cursor: pointer;
+}
+.lastnav .sign:hover {
+  transform: scale(1.05);
+  color: rgba(255, 255, 255, 0.994);
+}
+
+.centerdiv {
+  display: flex;
+  gap: 8px;
+  height: 88vh;
+}
+.left {
+  width: 25%;
+  background-color: rgb(18, 18, 18);
+  height: 100%;
+  margin: 8px 0px;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.right {
+  width: 75%;
+  background-color: rgb(33, 33, 33);
+  height: 100%;
+  margin: 8px 0px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.library img {
+  width: 25px;
+}
+.library {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.innerlib h4 {
+  display: inline;
+  margin: 10px;
+  color: gray;
+}
+.innerlib {
+  display: flex;
+}
+.library .plus {
+  width: 18px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1.2%;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.footer a {
+  color: gray;
+  text-decoration: none;
+}
+.footer .copyright a {
+  cursor: auto;
+}
+.footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+}
+
+.right h2 {
+  padding: 0px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.right h4,
+p {
+  margin: 0;
+}
+.right p {
+  font-family: "Afacad Flux", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(165, 165, 165);
+}
+.right h4 {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Afacad Flux", sans-serif;
+}
+.playlist {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 78vh;
+  overflow-y: scroll;
+}
+.card {
+  width: 180px;
+  padding: 10px;
+  border-radius: 6px;
+  height: 230px;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: rgba(118, 118, 118, 0.301);
+}
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.card .play {
+  background-color: rgb(38, 192, 43);
+  border-radius: 50%;
+  padding: 14px;
+  width: 25px;
+  position: absolute;
+  bottom: 35px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+.card:hover .play {
+  bottom: 55px;
+  opacity: 1;
+}
+/* scroll bar */
+/* Custom Scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of vertical scrollbar */
+  height: 12px; /* Height of horizontal scrollbar */
+}
+
+/* Track (Background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Dark background color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Thumb (Draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #444; /* Dark grey thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #1a1a1a; /* Padding around the thumb */
+}
+
+/* Thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666; /* Lighter grey when hovered */
+}
+
+/* Optional for Firefox */
+html {
+  scrollbar-width: thin; /* Thin scrollbar */
+}
+
+/* Customize scrollbar for Firefox */
+::-moz-scrollbar-thumb {
+  border-radius: 10px; /* Rounded corners for Firefox scrollbar thumb */
+}
+.playbar {
+  position: fixed;
+  bottom: 30px;
+  width: 71%;
+  padding: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(61, 61, 61),
+    rgb(0, 0, 0),
+    rgb(14, 14, 14)
+  );
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+.playbar .volume {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.volume img {
+  width: 18px;
+  cursor: pointer;
+}
+.range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.range input {
+  cursor: pointer;
+  height: 5px;
+  accent-color: grey;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+}
+.playbuttons {
+  width: 50%;
+}
+.playbuttons .btns {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.playbuttons .prevbtn,
+.nextbtn {
+  width: 23px;
+  cursor: pointer;
+}
+.playbuttons .playbtn {
+  width: 40px;
+  cursor: pointer;
+}
+.playbar .durbar {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.playbar .durbar .circle {
+  position: absolute;
+  bottom: -2px;
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.playbar .durbar .completed {
+  position: absolute;
+  bottom: 15px;
+  font-weight: 300;
+  font-size: 13px;
+}
+.playbar .durbar .total {
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  font-weight: 300;
+  font-size: 13px;
+}
+ol {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  background-color: rgb(18, 18, 18);
+  max-height: 73vh;
+  border-radius: 10px;
+}
+ol li {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(51, 51, 51);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px 0px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.playbar .songinfo {
+  width: 20%;
+  overflow: hidden;
+  font-weight: 200;
+  font-size: 15px;
+}
+ol li img {
+  width: 50px;
+  border: none;
+}
+ol li .sinfo {
+  width: 100%;
+  padding-left: 16px;
+}
+.ham {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .left {
+    position: absolute;
+    right: 80px;
+    z-index: 2;
+    width: 85vw;
+    height: 76vh;
+    margin-right: 0px;
+    overflow-y: scroll;
+    display: none;
+  }
+  .plus{
+    transform: rotate(45deg);
+  }
+  .songlist {
+    height: 64vh;
+    overflow-y: scroll;
+  }
+  .right {
+    width: 100vw;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .playlist {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    overflow-y: scroll;
+    height: 70vh;
+  }
+  .playbar {
+    position: fixed;
+    bottom: 30px;
+    width: 90%;
+    height: 100px;
+    left: 55px;
+  }
+  .playbar .songinfo {
+    width: 80vw;
+    font-weight: 300;
+    font-size: 12px;
+    position: absolute;
+    bottom: 75px;
+  }
+  .playbuttons {
+    width: 100%;
+  }
+  .volume,
+  .volume img,
+  .range {
+    display: none;
+  }
+  .playbuttons {
+    width: 750%;
+  }
+  .ham {
+    display: block;
+  }
+  .log,
+  .sign {
+    display: none;
+  }
+  .lastnav {
+    width: 40px;
+    margin-right: 0;
+  }
+  .lastnav span {
+    padding-right: 0px;
+  }
+  .centernav .home {
+    display: none;
+  }
+  .centernav {
+    width: 65%;
+  }
+  .search img {
+    width: 20px;
+  }
+  .search input {
+    font-size: 12px;
+  }
+  .logocontainer {
+    width: auto;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+@media (max-width: 760px) {
+  .left {
+    position: absolute;
+    right: 55px;
+    z-index: 2;
+    width: 85vw;
+    margin-top: 20px;
+    height: 76vh;
+    margin-right: 0px;
+    overflow-y: scroll;
+  }
+  .playbar {
+    position: fixed;
+    bottom: 30px;
+    width: 90%;
+    height: 100px;
+    left: 40px;
+  }
+  .playlist {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    overflow-y: scroll;
+    height: 65vh;
+  }
+}
+@media (max-width: 450px) {
+  .right {
+    height: 90vh;
+  }
+  .left {
+    position: absolute;
+    right: 30px;
+    z-index: 5;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .footer {
+    display: block;
+  }
+  .playbar {
+    left: 22px;
+  }
+}
+@media (max-width: 430px) {
+  .left {
+    right: 28px;
+    height: 74vh;
+  }
+  .playbar{
+   height: 130px;
+  }
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .songinfo{
+    padding-bottom: 20px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 390px) {
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 20px;
+  }
+  .playlist {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    overflow-y: scroll;
+    height: 60vh;
+  }
+}
+@media (max-width: 470px) {
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 24px;
+
+  }
+ 
+  .left {
+    right: 32px;
+    height: 74vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 20px;
+  }
+  .left {
+    right: 32px;
+    height: 74vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 19px;
+  }
+  .left {
+    right: 25px;
+    height: 74vh;
+  }
+}
+@media (max-width: 350px) {
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .songlist {
+    height: 62vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .songlist {
+    height: 60vh;
+    overflow-y: scroll;
+  }
+  .playbar {
+    left: 16px;
+  }
+}
+
