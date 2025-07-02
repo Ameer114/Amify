@@ -20,18 +20,14 @@ function convertSecondsToTime(seconds) {
 
 async function getsongs(folder="english") {
   window.folder=folder
-  let websong = await fetch(`./songs/${folder}/`);
-  let response = await websong.text();
+  let websong = await fetch(`/songs/${folder}/songs.json`);
+  let response = await websong.json();
+
   let div = document.createElement("div");
   div.innerHTML = response;
   let as = div.getElementsByTagName("a");
-  var songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];  
-    if (element.href.endsWith("mp3")) {
-      songs.push(element.href);
-    }
-  }
+  var songs = response.filter(song => song.endsWith(".mp3")).map(song => `songs/${folder}/${song}`);
+
 
   
   let ol = document.querySelector(".songlist");
