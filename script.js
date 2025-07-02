@@ -20,7 +20,7 @@ function convertSecondsToTime(seconds) {
 
 async function getsongs(folder="english") {
   window.folder=folder
-  let websong = await fetch(`github.com/Ameer114/Amify/tree/main/songs/${folder}/`);
+  let websong = await fetch(`https://github.com//Ameer114//Amify//tree//main//songs//${folder}//`);
   let response = await websong.text();
   let div = document.createElement("div");
   div.innerHTML = response;
