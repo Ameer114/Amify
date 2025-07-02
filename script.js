@@ -20,13 +20,11 @@ function convertSecondsToTime(seconds) {
 
 async function getsongs(folder="english") {
   window.folder=folder
-  let websong = await fetch(`/songs/${folder}/songs.json`);
+  let websong = await fetch(`songs/${folder}/songs.json`);
   let response = await websong.json();
 
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  var songs = response.filter(song => song.endsWith(".mp3")).map(song => `songs/${folder}/${song}`);
+
+  songs = response.filter(song => song.endsWith(".mp3")).map(song => `songs/${folder}/${song}`);
 
 
   
