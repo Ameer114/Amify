@@ -36,7 +36,7 @@ async function getsongs(folder="english") {
       `<li>
             <img src="assets/music.svg" alt="">
             <div class="sinfo">
-                <div class="sname">${decodeURI(song).split("/")[5]}</div>
+                <div class="sname">${decodeURI(song).split("/").pop()}</div>
                 <div class="artist">Amie</div>
             </div>
             <img src="assets/blackplay.svg" alt="">
